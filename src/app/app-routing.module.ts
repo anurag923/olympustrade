@@ -8,8 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'olymphome',
     pathMatch: 'full'
+  },
+  {
+    path: 'olymphome',
+    loadChildren: () => import('./olymphome/olymphome.module').then( m => m.OlymphomePageModule)
+  },
+  {
+    path: 'platform',
+    loadChildren: () => import('./platform/platform.module').then( m => m.PlatformPageModule)
   },
 ];
 
